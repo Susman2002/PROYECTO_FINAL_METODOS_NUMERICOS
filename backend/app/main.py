@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-#from app.api import scenario_a, scenario_b, scenario_c, scenario_d
 from app.api import scenario_a, scenario_b, scenario_c, scenario_d, scenario_e, scenario_f
 
 
@@ -12,7 +11,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-origins = ["http://localhost:3000"]
+#origins = ["http://localhost:3000"]
+origins = [
+    "http://localhost:3000",
+    "https://proyecto-final-metodos-numericos.vercel.app",
+]
 
 app.add_middleware(
     CORSMiddleware,
